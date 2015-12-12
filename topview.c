@@ -144,7 +144,7 @@ int main(int argc, char* argv[]){
   }
 
   SDL_Window* window = SDL_CreateWindow(
-    "Sidescroller engine",
+    "Top-view engine",
     SDL_WINDOWPOS_UNDEFINED, // Undefined starting X window position
     SDL_WINDOWPOS_UNDEFINED, // Undefined starting Y window position
     800, 600, // The window has a resolution of 800x60
