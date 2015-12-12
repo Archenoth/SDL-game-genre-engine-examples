@@ -1,0 +1,45 @@
+#+TITLE:Engine similarity
+#+AUTHOR:Archenoth
+#+EMAIL:archenoth@gmail.com
+
+The purpose of this repo is to serve as an example to emphasize how
+engines between different genres of games don't really need to be
+different architecturally.
+
+This repo contains two ridiculously simplistic, but heavily commented
+engines in SDL; One for a simple [[./sidescroller.c][side-scroller engine]], and the other
+for a simple [[./topview.c][top-view engine]].
+
+The two files are practically the same, with the only differences
+being the way that the state is changed based on player input (Inside
+the =handleInput()= functions.) and the lack of some unneeded state
+for the top view engine because of a lack of physics.
+
+*DISCLAIMER:* These two engines were made for the sake of
+demonstration only, and are not intended to be examples of
+particularly good engine code or stellar gameplay.
+
+* Building
+Building this on a *nix platform should be as simple as ensuring you
+have the [[https://www.libsdl.org/][SDL 2]] development libraries and then running:
+
+#+BEGIN_SRC sh
+  make
+#+END_SRC
+
+...inside of the folder.
+
+This will create =sidescroller= and =topview= binaries that you may
+run.
+
+There is also a =help= make rule that describes the things you can get
+=make= to do.
+
+* Controls for the Sidescroller engine
+The player in the sidescroller can be moved left or right with the
+[Left] and [Right] arrow keys, can jump with the [Spacebar], and can
+quit the engine with [Q].
+
+* Controls for the Top-view engine
+The player in the top-view can move in the four cardinal directions
+with the arrow keys, or exit the engine with [Q].
