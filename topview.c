@@ -71,7 +71,7 @@ void handleInput(Player* player){
   }
 
   // Player pressing UP on the keybord, move up to a minimum Y value
-  // of 0.
+  // of 5.
   if(keyState[SDL_SCANCODE_UP] && player->y > 5){
     player->y -= MOVEMENT_SPEED;
   }
