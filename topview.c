@@ -4,6 +4,9 @@
 // How much time do we want between frames (in milliseconds)?
 #define FRAME_INTERVAL 20
 
+// How fast do we want to move around the screen with the arrow keys?
+// (In pixels per tick)
+#define MOVEMENT_SPEED 3
 
 /**
  * The player structure containing:
@@ -58,25 +61,25 @@ void handleInput(Player* player){
   // Player pressing LEFT on the keybord, move left, to a minimum
   // coordinate of 5.
   if(keyState[SDL_SCANCODE_LEFT] && player->x > 5){
-    player->x -= 2;
+    player->x -= MOVEMENT_SPEED;
   }
 
   // Player pressing RIGHT on the keyboard, move right to a maximum
   // coordinate of 770.
   if(keyState[SDL_SCANCODE_RIGHT] && player->x < 770){
-    player->x += 2;
+    player->x += MOVEMENT_SPEED;
   }
 
   // Player pressing UP on the keybord, move up to a minimum Y value
   // of 0.
   if(keyState[SDL_SCANCODE_UP] && player->y > 5){
-    player->y -= 2;
+    player->y -= MOVEMENT_SPEED;
   }
 
   // Player pressing DOWN on the keybord, move down to a maximum Y
   // value of 550.
   if(keyState[SDL_SCANCODE_DOWN] && player->y < 550){
-    player->y += 2;
+    player->y += MOVEMENT_SPEED;
   }
 }
 
