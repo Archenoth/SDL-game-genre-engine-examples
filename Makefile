@@ -10,10 +10,10 @@ FLAGS=-Wall `sdl2-config --libs --cflags`
 
 all: $(SIDESCROLLER_OUT) $(TOPVIEW_OUT)
 
-sidescroller:
+sidescroller: $(SIDESCROLLER_SRC)
 	$(CC) $(SIDESCROLLER_SRC) $(FLAGS) -o $@
 
-topview:
+topview: $(TOPVIEW_SRC)
 	$(CC) $(TOPVIEW_SRC) $(FLAGS) -o $@
 
 
