@@ -93,6 +93,9 @@ void handleInput(Player* player){
  */
 void render(SDL_Window* window, Player* player){
   SDL_Surface* windowSurface = SDL_GetWindowSurface(window);
+  // If we had a background, we should just fill the changed rectangle
+  // here instead of painting the whole surface black.
+  SDL_FillRect(windowSurface, NULL, 0);
 
   // Delay so that the engine isn't always at 100% CPU and slows down
   // events enough to make things playable. This isn't best practice,
